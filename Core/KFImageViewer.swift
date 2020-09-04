@@ -470,8 +470,9 @@ open class KFImageViewer: UIView {
 
         fullscreen.initialPage = currentPage
         fullscreen.inputs = images
-        slideshowTransitioningDelegate = ZoomAnimatedTransitioningDelegate(slideshowView: self, slideshowController: fullscreen)
-        fullscreen.transitioningDelegate = slideshowTransitioningDelegate
+        fullscreen.modalPresentationStyle = .fullScreen
+//        slideshowTransitioningDelegate = ZoomAnimatedTransitioningDelegate(slideshowView: self, slideshowController: fullscreen)
+//        fullscreen.transitioningDelegate = slideshowTransitioningDelegate
         controller.present(fullscreen, animated: true, completion: nil)
 
         return fullscreen
